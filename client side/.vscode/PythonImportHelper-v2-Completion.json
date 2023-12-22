@@ -1,0 +1,78 @@
+[
+    {
+        "label": "QMainWindow",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "loadUi",
+        "importPath": "PyQt5.uic",
+        "description": "PyQt5.uic",
+        "isExtraImport": true,
+        "detail": "PyQt5.uic",
+        "documentation": {}
+    },
+    {
+        "label": "PyQt5",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "LoginWindow",
+        "importPath": "login_window",
+        "description": "login_window",
+        "isExtraImport": true,
+        "detail": "login_window",
+        "documentation": {}
+    },
+    {
+        "label": "LoginWindow",
+        "kind": 6,
+        "importPath": "login_window",
+        "description": "login_window",
+        "peekOfCode": "class LoginWindow(QMainWindow):\n    def __init__(self): #constructor, this will be called when the mainwindow object is created in main.py file\n        super(LoginWindow, self).__init__() #first window that should open is the login window\n        loadUi('UI/login_window.ui', self)\n    #in login file we have login and register button\n        self.register_button.clicked.connect(self.go_to_register_page)\n        self.login_button.clicked.connect(self.open_settings_window)\n        #with this code we connect clicks with the methods gotoregisterpage and opensettingswindow\n        self.show() #show function login window will be displayed\n    def go_to_register_page(self):",
+        "detail": "login_window",
+        "documentation": {}
+    },
+    {
+        "label": "mainwindow",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "mainwindow = LoginWindow\ntry:\n    sys.exit(app.exec_())\nexcept:\n    print(\"exiting\") #makes sure that while exiting if some functionality is still open it would not cause any error\n#it will print exiting and wait for any background processes to close",
+        "detail": "main",
+        "documentation": {}
+    }
+]
